@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header & Search Bar Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ffcb05; /* Pokémon Yellow */
+    text-shadow: 2px 2px #3b4cca; /* Pokémon Blue */
+    margin-bottom: 10px;
+}
+
+#search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#search-bar:focus {
+    border-color: #3b4cca;
+}
+
+/* Grid Layout for Cards */
+.pokedex-grid {
+    display: grid;
+    /* Auto-fit creates responsive columns automatically */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    text-transform: capitalize; /* Makes the first letter uppercase */
+    font-size: 1.2rem;
+    color: #555;
+}
